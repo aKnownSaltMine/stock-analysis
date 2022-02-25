@@ -28,9 +28,13 @@ A link to the final workbook including the macros can be found [here](https://gi
 The major difference between the [original code](https://github.com/aKnownSaltMine/stock-analysis/blob/main/Resources/AllStocksAnalysis()) (Lines 50-84) and the [refactored code](https://github.com/aKnownSaltMine/stock-analysis/blob/main/Resources/AllStocksAnalysisRefactored()) (Lines 50-94) was that the original only used a single array in order to keep track of the actual ticker when going through the for-loop. Because of this, at the start of each loop the macro would have to activate the worksheet of the year that we input, and then would also have to output the value before moving into the next loop. Because the refactored code was able to use multiple arrays in order to contain all of the data, it only had to activate the the workbook once, loop through and gather all the needed data for each ticker. Then it only needed to output once. This alone was able to speed up the macro considerably. 
 ### Code Performance After Refactoring
 On the [original code](https://github.com/aKnownSaltMine/stock-analysis/blob/main/Resources/AllStocksAnalysis()) the two different years would run just under a second for analyzing all of the stocks in the dataset.
+
 ![2017](https://github.com/aKnownSaltMine/stock-analysis/blob/main/Resources/VBA_Challenge_2017%20(unrefactored).PNG) ![2018](https://github.com/aKnownSaltMine/stock-analysis/blob/main/Resources/VBA_Challenge_2018%20(unrefactored).PNG)
+
 Though after refactoring, the macro was able to run for both years in just over 10th of a second for a total reduction in runtime of 83.26%.
+
 ![2017](https://github.com/aKnownSaltMine/stock-analysis/blob/main/Resources/VBA_Challenge_2017.PNG) ![2018](https://github.com/aKnownSaltMine/stock-analysis/blob/main/Resources/VBA_Challenge_2018.PNG)
+
 ## Summary
 The main advantage of refactoring code that it improves in efficency by improving on the logic and the amount of commands that the computer would have to execute. The major disadvantage of refactoring a block of code is that the code already works, if not optimized. So you would be spending your time fixing what is not broken. Also there is no guaruntee that the time spent refactoring the code will actually yield any noticable results, making the time spent, for nothing. 
 
